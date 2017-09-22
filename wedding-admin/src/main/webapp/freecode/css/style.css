@@ -1,0 +1,81 @@
+.fonts18{
+    font-size: 18px;
+}
+.fonts16{
+    font-size: 16px;
+}
+.mBottom10{
+    margin-bottom: 10px;
+}
+.lineCon{
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lineCon2{
+    padding: 50px 0;
+    border-bottom: 1px dashed #ccc;
+    border-top: 1px dashed #ccc;
+}
+.viewState2{
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    float: left;
+    font-size: 16px;
+}
+.radiusRound{
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: lightseagreen;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 10px 5px 10px;
+}
+.viewState{
+    float: left;
+    padding: 10px 20px;
+    border-right: 1px solid #ccc;
+    font-size: 16px;
+}
+.progressCon{
+    overflow: hidden;
+}
+.progressItem{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    width: 55px;
+    padding: 18px 12px;
+    border-radius: 50%;
+    background-color: deepskyblue;
+    text-align: center;
+
+}
+.doshedLine{
+    border-bottom: 1px dashed #ccc;
+    height: 1px;
+    width: 50px;
+    float: left;
+    margin: 35px 5px 0 5px;
+}
+.sNo{
+    font-size: 22px;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+.paddingL0{
+    padding-left: 0;
+}
+.disableUse{
+    color: #ccc;
+}
+.radiusRoundCon{
+    overflow: hidden;
+    float: left;
+    text-align: center;
+    height: 100px;
+    width: 70px;
+}

@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/* Icon */
+.tabsHeader li.main a span span, #taskbar li .taskbutton span { background:url(./images/icon.png) no-repeat;}
+
+/* Panel */
+.panel,
+.panel .panelHeader, .panel .panelHeaderContent, .panel .panelHeaderContent h1,
+.panel .panelFooter, .panel .panelFooterContent { }
+.panel .panelHeader { border-bottom:solid 0 #eee; background:#eee; }
+.panel .expandable, .panel .collapsable { background:url(./images/panel/panel_icon.png) no-repeat; }
+.panel .panelHeaderContent h1 { color:#000; }
+.panel .panelContent { }
+
+.panel .grid { border-color:#C1C1C1;}
+
+/* Tabs */
+.tabs, .tabsHeader, .tabsHeaderContent,
+.tabs .tabsHeader ul, .tabs .tabsHeader li, .tabs .tabsHeader li a, .tabs .tabsHeader li span,
+.tabs .tabsFooter, .tabs .tabsFooterContent { }
+
+.tabs .tabsHeader { border-bottom:solid 1px #ddd; }
+.tabs .tabsHeader li { background-color:#eee; }
+.tabs .tabsHeader li a { color:#000;}
+.tabs .tabsHeader li span { color:#000;}
+.tabs .tabsHeader li.selected { background-color:#ddd; }
+.tabs .tabsContent { background:#fff;}
+
+/* TabsPage */
+.tabsPage .tabsPageHeader { border-bottom:solid 1px #ddd; }
+.tabsPage .tabsPageHeader li { background-color:#eee;}
+.tabsPage .tabsPageHeader li.selected { background-color: #ddd; }
+.tabsPage .tabsPageHeader li a { color:#000;}
+.tabsPage .tabsPageHeader li .close,
+.tabsPage .tabsPageHeader li.hover .close,
+.tabsPage .tabsPageHeader li.selected .close { background:url(./images/tabs/tabspage_icon.png) no-repeat;}
+.tabsPage .tabsLeft, .tabsPage .tabsRight, .tabsPage .tabsMore { background:url(./images/tabs/tabscontrol.png) no-repeat;}
+.tabsPage .tabsMoreList { border-color:#ddd; background:#FFF;}
+.tabsPage .tabsPageHeader .home_icon { background:url(./images/icon.png) no-repeat;}
+.tabsPage .tabsPageContent { background:#FFF;}
+
+/* Alert */
+.alert .alertFooter { border:solid 1px #ddd; background:#fff; border-top-width:0px;}
+.alert .alertFooter_r, .alert .alertFooter_c { }
+.alert .alertContent { border-color:#ddd; background:#fff;}
+.alert .warn .alertInner { border-color:#e83e09; background:#fefacf;}
+.alert .error .alertInner { border-color:#e50000; background:#fefacf;}
+.alert .correct .alertInner, .alert .info .alertInner { border-color:#ddd; background:#fefacf;}
+.alert .confirm .alertInner { border-color:#ddd; background:#fefacf;}
+.alert h1 { border-color:#CCC; }
+
+/* Dialog */
+.dialog { border:solid 1px #ddd; }
+.dialogHeader, .dialog .dialogHeader_r, .dialog .dialogHeader_c { background-color:#ddd; }
+.dialog .dialogFooter, .dialog .dialogFooter_r, .dialog .dialogFooter_c { background-color:#fff; }
+.dialog .dialogHeader .close, .dialog .dialogHeader .maximize, .dialog .dialogHeader .restore, .dialog .dialogHeader .minimize, .resizable_f_r { background:url(./images/dialog/dialogpanel_icon.png) no-repeat;}
+.dialog .dialogHeader h1 { color:#424242;}
+.dialog .dialogContent { border-color:#fff; background-color:#fff;}
+
+.resizable { border-color:#081629; background:#c3d7dc;}
+
+/* Shadow */
+.shadow .shadow_h_l { background:url(./images/shadow/shadow_h_l.png) no-repeat;}
+.shadow .shadow_h_r { background:url(./images/shadow/shadow_h_r.png) no-repeat;}
+.shadow .shadow_h_c { background:url(./images/shadow/shadow_h_c.png) repeat-x;}
+.shadow .shadow_c_l { background:url(./images/shadow/shadow_c_l.png) repeat-y;}
+.shadow .shadow_c_r { background:url(./images/shadow/shadow_c_r.png) repeat-y;}
+.shadow .shadow_c_c { background:url(./images/shadow/shadow_c_c.png) repeat;}
+.shadow .shadow_f_l { background:url(./images/shadow/shadow_f_l.png) no-repeat;}
+.shadow .shadow_f_r { background:url(./images/shadow/shadow_f_r.png) no-repeat;}
+.shadow .shadow_f_c { background:url(./images/shadow/shadow_f_c.png) repeat-x;}
+
+/* Tree */
+.tree div div { background:url(./images/tree/tree.png) no-repeat;}
+.tree .folder_collapsable, .tree .folder_expandable, .tree .file { background:url(./images/tree/folder.png) no-repeat;}
+.tree .checked, .tree .unchecked, .tree .indeterminate { background:url(./images/tree/check.png) no-repeat;}
+.tree ul { background:#FFF;}
+.tree li a, .tree li span { color:#183152;}
+.tree .hover { background:#f5f5f5;}
+.tree .selected { background-color:#e8edf3;}
+
+/* Accordion */
+.accordion .accordionHeader, .accordion .accordionHeader h2, .accordion .accordionHeader h2 span { color:#222; }
+.accordion a, .accordion a:hover, .accordion a:visited, .accordion a:link { color:#222; }
+.accordion { background:#FFF;}
+.accordion .accordionHeader { background-color:#eee; }
+.accordion .accordionContent { color:#fff; }
+
+.accordion .accordionHeader h2 { background:url(./images/accordion/accordion.png); }
+.accordion .accordionHeader.hover h2 { }
+
+.accordion .accordionContent ul.menulist li a:hover { background-color:#f5f5f5; }
+.accordion .accordionContent ul.menulist li ul li {  }
+.accordion .accordionContent ul.menulist li ul li a, .accordion .accordionContent ul.menulist li ul li a:hover { color:#3e3e3e; background-image:url(./images/accordion/accordion.png); }
+
+/* Grid */
+.toolBar li.hover, .toolBar li.hover a, .toolBar li.hover span, .toolBar span {}
+.pagination li.hover, .pagination li.hover a, .pagination li span,
+.pagination li.disabled span span,
+.panelBar .line, .pagination li.jumpto .goto { background:url(./images/grid/grid.png) no-repeat; }
+.panelBar { border-color:#C1C1C1; background-color:#f8f8f8; }
+
+.grid { background:#FFF;}
+.grid .gridHeader, .grid .gridHeader th { border-color:#ddd; background:#eee;}
+.grid .gridHeader th div { border-left-color:#d0d0d0; border-right-color:#d0d0d0;}
+.grid .gridHeader th.hover, .grid .gridHeader th.thSelected { background-color:#e9e9e9; }
+.grid .gridTbody td { border-right:solid 1px #ededed; border-bottom:solid 1px #ededed; }
+.grid .gridTbody .hover { border-color:#dddddd; background:#f5f5f5; }
+.grid .gridTbody .selected { background:#e8edf3;}
+.grid .error{ background:rgba(250,125,127,0.55); }
+.grid .resizeMarker, .grid .resizeProxy { background:url(./images/grid/resizeCol.png) repeat-y;}
+
+/* CSS Table */
+table.list { background-color:#fff; }
+table.list thead tr { background:#eee; }
+table.list th { border-right:solid 1px #ddd; border-bottom:solid 1px #ddd; }
+table.list th.asc, .grid .gridHeader th.asc{ background:url(./images/order/up.png); }
+table.list th.desc, .grid .gridHeader th.desc{ background:url(./images/order/down.png);}
+table.list td { border-right:solid 1px #ededed; border-bottom:solid 1px #ededed; }
+table.list .trbg { }
+table.list .hot { background-color:#fff5c0; }
+table.list .hover { border-color:#dddddd; background:#f5f5f5; }
+table.list .selected { background:#e8edf3; }
+table.nowrap tbody tr { border-bottom:solid 1px #ededed; }
+
+/* ProgressBar */
+.progressBar { border:solid 2px #86a5ad; background:#FFF url(./images/progressBar/progressBar_m.gif) no-repeat 10px 10px;}
+
+/* ----------------------------------------------------------------- Form */
+/* TextInput */
+.textInput, input.focus, input.required, input.error, input.readonly, input.disabled,
+textarea.focus, textarea.required, textarea.error, textarea.readonly, textarea.disabled {  }
+
+.textInput, .textArea { border-color:#C1C1C1;}
+input.required, textarea.required { border-color:#3ea5e0; }
+input.error, textarea.error { border-color:#f80c10; background-color:rgba(245,81,81,0.1);}
+input.focus, textarea.focus { border-color:#34a778; background-color:#fff; }
+input.readonly, textarea.readonly { border-color:#C1C1C1; background-color:#F6F6F6; }
+input.disabled, textarea.disabled { border-color:#C1C1C1; background-color:#F6F6F6; }
+
+.inputButton, .inputDateButton { background:url(./images/form/input_bt.png) no-repeat;}
+
+/* Button */
+.button, .button span,
+.buttonDisabled, .buttonDisabled span,
+.buttonActive, .buttonActive span,
+.button .buttonContent, .buttonHover, .buttonHover .buttonContent,
+.buttonActive .buttonContent, .buttonActiveHover, .buttonActiveHover .buttonContent,
+.buttonDisabled .buttonContent { background-color:#167352; }
+
+.buttonHover, .buttonHover .buttonContent, .buttonActiveHover, .buttonActiveHover .buttonContent { background-color:#167352; }
+
+.button span, .buttonDisabled span, .buttonActive span,
+.button .buttonContent, .buttonHover, .buttonHover .buttonContent,
+.buttonActive .buttonContent, .buttonDisabled .buttonContent,
+.button button, .buttonHover button,
+.buttonActive button, .buttonDisabled button { color:#fff;}
+
+.buttonDisabled span, .buttonDisabled:hover span,
+.buttonDisabled button { color:#999;}
+
+a.btnAdd, a.btnDel, a.btnView, a.btnEdit, a.btnSelect, a.btnInfo, a.btnAssign, a.btnLook, a.btnAttach{ background:url(./images/button/imgx2.png) no-repeat; }
+
+label.alt { color:#ccc; }
+
+/* ----------------------------------------------------------------- Pages */
+/* Layout */
+body, #splitBar { background:#fff;}
+#splitBarProxy { border-color:#c0c0c0; background:#CCC;}
+
+a:link { color:#167352; }
+a:visited { color:#167352; }
+a:hover { color:#000; }
+
+/*#header, #header .headerNav { background:#1e232f;}*/
+#header { background-color:#34a778; }
+#header .nav li { float:left; margin-left:-1px; padding:0 8px; line-height:11px; }
+#header .nav li a { color:#fff;}
+#header .themeList li div { background:url(./images/themeButton.png) no-repeat; }
+.toggleCollapse, .toggleCollapse div { }
+.toggleCollapse { padding:0; }
+.toggleCollapse h2 { color:#183152; }
+#sidebar_s .collapse { background:#eee; }
+#sidebar_s .collapse:hover { background:#ddd;}
+#sidebar_s .toggleCollapse:hover { background-color:#eee;}
+#sidebar_s .toggleCollapse span { background-image:url(./images/accordion/accordion.png); }
+
+#taskbar, #taskbar li, #taskbar li .taskbutton { background-color:#000;  }
+#taskbar .close, #taskbar .restore, #taskbar .minimize { background:url(./images/layout/taskbar_icon.png) no-repeat; }
+#taskbar li .taskbutton span { color:#FFF; }
+#taskbar .taskbarLeft, #taskbar .taskbarRight { background:url(./images/layout/taskbar_control.png) no-repeat; }
+
+/* Menu */
+#navMenu, #navMenu li, #navMenu li.selected a, #navMenu li.selected span {  }
+#navMenu {  }
+#navMenu li a, #navMenu li span { color:#FFF; }
+#navMenu li.selected { background-color:#fff; }
+#navMenu li.selected span { color:#000; }
+#navMenu li a:hover { background-color: #209b69; }
+#navMenu li a:hover span { color:#fff; }
+
+#navMenu li a.logo { background:url(images/logo.png); }
+#navMenu li span.optmenu { background:url(./images/accordion/accordion.png); }
+#navMenu li span.optmenu:hover { background-color: #209b69; }
+
+/* userInfo */
+#userInfo span { color:#FFF; }
+#userInfo span a { color:#e5e5e5; }
+
+
+/* Homepage */
+.sidebarContent { display:block; overflow:auto; height:500px; border:solid 1px #86B4EC; background:#FFF;}
+.accountInfo { display:block; overflow:hidden; height:60px; padding:0 10px; background:url(./images/account_info_bg.png) repeat-x}
+.accountInfo p { padding:8px 0 0 0; line-height:19px;}
+.accountInfo p span { font-size:14px; font-weight:bold;}
+.accountInfo .right { float:right; padding-right:10px; text-align:right;}
+.accountInfo .alertInfo { float:right; width:300px; height:60px; padding-left:10px; border-left:solid 1px #accdf4;}
+.accountInfo .alertInfo h2 { padding:8px 0; line-height:17px;}
+.accountInfo .alertInfo a { padding:6px 0 0 0; line-height:21px;}
+
+/* Pages */
+.pageForm .inputInfo,
+.pageFormContent .inputInfo{ color:#999;}
+
+/* Pages Form */
+.pageFormContent span.info { color:#7F7F7F; }
+.pageFormContent span.des { color:#000; }
+.pageFormContent span.hot { color:#ff6600; }
+.pageFormContent p.header { background:#f8f8f8; }
+
+/* Pages dialog */
+.dialog .pageHeader, .dialog .pageContent {  }
+.dialog .pageContent .pageFormContent { background:#FFF;}
+
+/* Pages default */
+.page .pageHeader, .pageForm .formBar { }
+.page .searchBar label { color:#183152;}
+
+/* Pages Form */
+.pageForm .formBar { border-color:#C1C1C1;}
+.divider { border-color:#C1C1C1;}
+
+/* combox */
+.combox .select a  { color:#000; }
+.comboxop { border-color:#C1C1C1; }
+.combox, .combox div, .combox div a { color:#000; border-color:#C1C1C1; background:url(./images/form/search-bg.png) no-repeat; }
+
+/* status */
+.status-normal { color:#34a778 !important; }
+.status-stop { color:#ea5429 !important; }
+.status-disab { color:#999 !important; }
+
+.toolBar li span.info { color:#999; }
+
+.pageFormContent span.alarm { color:#ff6600; }
+.pageFormContent span.unit-li span.time { color:#ccc; }
+
+/* 百度地图 */
+.BMap_bubble_title { margin-bottom:5px; font-family:microsoft !important; font-size:13px !important; }
+.BMap_bubble_content { font-size:13px !important; line-height:18px !important; }

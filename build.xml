@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="wedding" default="default" >
+    <import file="buildConfig.xml" />
+
+    <tstamp prefix="build">
+        <format property="time" pattern="yyyy-MM-dd.HH.mm.ss"/>
+        <format property="date" pattern="yyyyMMddHHmmss"/>
+    </tstamp>
+
+    <tstamp>
+        <format property="TODAY_UK" pattern="yyyyMMdd_HHmmsssss"  locale="cn,CN"/>
+    </tstamp>
+
+    <!-- deploy dir -->
+    <property name="admin.deploy.dir" value="/app/deploy/wedding/admin" />
+    <property name="weixin.deploy.dir" value="/app/deploy/wedding/weixin" />
+
+    <!-- war -->
+    <property name="admin-war" value="${basedir}/wedding-admin/target/wedding-admin-1.0-SNAPSHOT.war" />
+    <property name="weixin-war" value="${basedir}/wedding-weixin/target/wedding-weixin-1.0-SNAPSHOT.war" />
+
+    <target name="prepare-admin">
+        <exec executable="/bin/bash" >
+            <arg line="-c 'rm -rf ${admin.deploy.dir}'" />
+        </exec>
+        <mkdir dir="${admin.deploy.dir}"/>
+    </target>
+
+    <target name="prepare-weixin">
+        <exec executable="/bin/bash" >
+            <arg line="-c 'mv ${weixin.deploy.dir} ${weixin.deploy.dir}_${TODAY_UK}'" />
+        </exec>
+        <exec executable="/bin/bash" >
+            <arg line="-c 'rm -rf ${weixin.deploy.dir}'" />
+        </exec>
+        <mkdir dir="${weixin.deploy.dir}"/>
+    </target>
+
+    <target name="war-admin-trunk" >
+        <echo>War this project ..</echo>
+        <exec executable="mvn" >
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-Dmaven.test.skip=true"/>
+            <arg value="-am"/>
+            <arg value="-pl"/>
+            <arg value="wedding-admin"/>
+        </exec>
+        <echo>War Success : ${war.dir}</echo>
+    </target>
+
+    <target name="war-admin-beta" >
+        <echo>War this project ..</echo>
+        <exec executable="mvn" >
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-Pbeta"/>
+            <arg value="-Dmaven.test.skip=true"/>
+            <arg value="-am"/>
+            <arg value="-pl"/>
+            <arg value="wedding-admin"/>
+        </exec>
+        <echo>War Success : ${war.dir}</echo>
+    </target>
+
+    <target name="war-admin-preproduct" >
+        <echo>War this project ..</echo>
+        <exec executable="mvn" >
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-Ppreproduct"/>
+            <arg value="-Dmaven.test.skip=true"/>
+            <arg value="-am"/>
+            <arg value="-pl"/>
+            <arg value="wedding-admin"/>
+        </exec>
+        <echo>War Success : ${war.dir}</echo>
+    </target>
+
+    <target name="war-admin-product" >
+        <echo>War this project ..</echo>
+        <exec executable="mvn" >
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-Pproduct"/>
+            <arg value="-Dmaven.test.skip=true"/>
+            <arg value="-am"/>
+            <arg value="-pl"/>
+            <arg value="wedding-admin"/>
+        </exec>
+        <echo>War Success : ${war.dir}</echo>
+    </target>
+
+    <target name="war-weixin-trunk" >
+        <echo>War this project ..</echo>
+        <exec executable="mvn" >
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-Dmaven.test.skip=true"/>
+            <arg value="-am"/>
+            <arg value="-pl"/>
+            <arg value="wedding-weixin"/>
+        </exec>
+        <echo>War Success : ${war.dir}</echo>
+    </target>
+
+    <target name="war-weixin-beta" >
+        <echo>War this project ..</echo>
+        <exec executable="mvn" >
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-Pbeta"/>
+            <arg value="-Dmaven.test.skip=true"/>
+            <arg value="-am"/>
+            <arg value="-pl"/>
+            <arg value="wedding-weixin"/>
+        </exec>
+        <echo>War Success : ${war.dir}</echo>
+    </target>
+
+    <target name="war-weixin-product" >
+        <echo>War this project ..</echo>
+        <exec executable="mvn" >
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-Pproduct"/>
+            <arg value="-Dmaven.test.skip=true"/>
+            <arg value="-am"/>
+            <arg value="-pl"/>
+            <arg value="wedding-weixin"/>
+        </exec>
+        <echo>War Success : ${war.dir}</echo>
+    </target>
+
+    <target name="war-weixin-preproduct" >
+        <echo>War this project ..</echo>
+        <exec executable="mvn" >
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-Ppreproduct"/>
+            <arg value="-Dmaven.test.skip=true"/>
+            <arg value="-am"/>
+            <arg value="-pl"/>
+            <arg value="wedding-weixin"/>
+        </exec>
+        <echo>War Success : ${war.dir}</echo>
+    </target>
+
+    <!-- ##################################deploy######################################-->
+
+    <target name="deploy-admin-trunk" depends="prepare-admin, war-admin-trunk">
+        <echo>Begin deploy...</echo>
+        <exec executable="jar" dir="${admin.deploy.dir}">
+            <arg value="-xfM"/>
+            <arg value="${admin-war}" />
+        </exec>
+        <echo>deploy complete at ${build.time}.</echo>
+        <echo>now you can start the admin tomcat.</echo>
+    </target>
+
+    <target name="deploy-admin-beta" depends="prepare-admin, war-admin-beta">
+        <echo>Begin deploy...</echo>
+        <exec executable="jar" dir="${admin.deploy.dir}">
+            <arg value="-xfM"/>
+            <arg value="${admin-war}" />
+        </exec>
+        <echo>deploy complete at ${build.time}.</echo>
+        <echo>now you can start the admin tomcat.</echo>
+    </target>
+
+    <target name="deploy-admin-preproduct" depends="prepare-admin, war-admin-preproduct">
+        <echo>Begin deploy...</echo>
+        <exec executable="jar" dir="${admin.deploy.dir}">
+            <arg value="-xfM"/>
+            <arg value="${admin-war}" />
+        </exec>
+        <echo>deploy complete at ${build.time}.</echo>
+        <echo>now you can start the admin tomcat.</echo>
+    </target>
+
+    <target name="deploy-admin-product" depends="prepare-admin, war-admin-product">
+        <echo>Begin deploy...</echo>
+        <exec executable="jar" dir="${admin.deploy.dir}">
+            <arg value="-xfM"/>
+            <arg value="${admin-war}" />
+        </exec>
+        <echo>deploy complete at ${build.time}.</echo>
+        <echo>now you can start the admin tomcat.</echo>
+    </target>
+
+    <target name="deploy-weixin-trunk" depends="prepare-weixin, war-weixin-trunk">
+        <echo>Begin deploy...</echo>
+        <exec executable="jar" dir="${weixin.deploy.dir}">
+            <arg value="-xfM"/>
+            <arg value="${weixin-war}" />
+        </exec>
+        <echo>deploy complete at ${build.time}.</echo>
+        <echo>now you can start the weixin tomcat.</echo>
+    </target>
+
+    <target name="deploy-weixin-beta" depends="prepare-weixin, war-weixin-beta">
+        <echo>Begin deploy...</echo>
+        <exec executable="jar" dir="${weixin.deploy.dir}">
+            <arg value="-xfM"/>
+            <arg value="${weixin-war}" />
+        </exec>
+        <echo>deploy complete at ${build.time}.</echo>
+        <echo>now you can start the weixin tomcat.</echo>
+    </target>
+
+    <target name="deploy-weixin-preproduct" depends="prepare-weixin, war-weixin-preproduct">
+        <echo>Begin deploy...</echo>
+        <exec executable="jar" dir="${weixin.deploy.dir}">
+            <arg value="-xfM"/>
+            <arg value="${weixin-war}" />
+        </exec>
+        <echo>deploy complete at ${build.time}.</echo>
+        <echo>now you can start the weixin tomcat.</echo>
+    </target>
+
+    <target name="deploy-weixin-product" depends="prepare-weixin, war-weixin-product">
+        <echo>Begin deploy...</echo>
+        <exec executable="jar" dir="${weixin.deploy.dir}">
+            <arg value="-xfM"/>
+            <arg value="${weixin-war}" />
+        </exec>
+        <echo>deploy complete at ${build.time}.</echo>
+        <echo>now you can start the weixin tomcat.</echo>
+    </target>
+
+    <target name="default">
+        <echo>ant deploy-admin-trunk</echo>
+        <echo>ant deploy-admin-beta</echo>
+        <echo>ant deploy-admin-product</echo>
+        <echo>ant deploy-admin-preproduct</echo>
+
+        <echo>ant deploy-weixin-trunk</echo>
+        <echo>ant deploy-weixin-beta</echo>
+        <echo>ant deploy-weixin-preproduct</echo>
+        <echo>ant deploy-weixin-product</echo>
+
+        <echo>ant deploy-job-trunk</echo>
+        <echo>ant deploy-job-beta</echo>
+        <echo>ant deploy-job-preproduct</echo>
+        <echo>ant deploy-job-product</echo>
+
+
+    </target>
+</project>

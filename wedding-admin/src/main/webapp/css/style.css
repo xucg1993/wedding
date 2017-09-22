@@ -1,0 +1,52 @@
+.my-margin-5{
+	margin: 5px;
+}
+.my-width-50{
+	width: 50%;
+	/*margin: 5px 1%;*/
+	border: 5px solid #fff;
+}
+.my-border-0,.my-border-0:before{
+	border: 0;
+}
+.my-grid-bicon{
+	width: 56px;
+	height: 56px;
+}
+.myfont{
+	color: #fff;
+	font-size: 18px;
+	font-weight: 200;
+}
+.my-normal-font{
+	color: #fff;
+	font-weight: 200;
+}
+.my-paddingtb-55{
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+.my-width-50:nth-child(20n+1){
+	background-color: #C0392B;
+}
+.my-width-50:nth-child(20n+2){
+	background-color: #3498DB;
+}
+.my-width-50:nth-child(20n+3){
+	background-color: #E67E22;
+}
+.my-width-50:nth-child(20n+4){
+	background-color: #34495E;
+}
+.my-width-50:nth-child(20n+5){
+	background-color: #8E44AD;
+}
+.my-width-50:nth-child(20n+6){
+	background-color: #27AE60;
+}
+.weui_grid:before{
+	border-bottom: 0;
+	border-right: 0;
+	border-top: 0;
+	border-left: 0;
+}

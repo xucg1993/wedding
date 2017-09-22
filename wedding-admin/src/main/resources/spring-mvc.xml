@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:beans="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <context:component-scan base-package="com.xucg.wedding.admin.controller" />
+    <mvc:annotation-driven />
+    <!-- view
+    <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/vm/" />
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">gbk</prop>
+                <prop key="output.encoding">gbk</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="prefix" value="" />
+        <property name="suffix" value=".vm" />
+        <property name="order" value="0" />
+        <property name="cache" value="false" />
+    </bean>
+-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/" />
+        <property name="suffix" value=".jsp" />
+        <property name="order" value="0" />
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="1048576000" />
+    </bean>
+
+    <mvc:interceptors>
+        <bean class="com.xucg.wedding.common.filter.CsrfInterceptor" />
+    </mvc:interceptors>
+
+</beans>
